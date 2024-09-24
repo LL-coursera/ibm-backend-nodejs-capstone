@@ -6,11 +6,11 @@ const pinoLogger = require('./logger');
 const path = require('path');
 
 const connectToDatabase = require('./models/db');
-const {loadData} = require("./util/import-mongo/index");
+const { loadData } = require("./util/import-mongo/index");
 
 
 const app = express();
-app.use("*",cors());
+app.use("*", cors());
 const port = 3060;
 
 // Connect to MongoDB; we just do this one time
@@ -43,9 +43,9 @@ app.use((err, req, res, next) => {
     res.status(500).send('Internal Server Error');
 });
 
-app.get("/",(req,res)=>{
-    res.send("Inside the server")
-})
+app.get("/", (req, res) => {
+    res.send("Inside the server");
+});
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
