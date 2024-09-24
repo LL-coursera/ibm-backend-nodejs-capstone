@@ -22,13 +22,13 @@ module.exports = {
     ecmaVersion: 'latest'
   },
   rules: {
-    'semi': ['error', 'never'], // Disallow semicolons
-    'comma-spacing': ['error', { 'before': false, 'after': true }], // A space after a comma
-    'no-multiple-empty-lines': ['error', { 'max': 1 }], // No two blank lines
-    'indent': ['error', 2], // Enforce 2 spaces for indentation
-    'quotes': ['error', 'single'], // Use single quotes for strings
-    'eqeqeq': ['error', 'always'], // Enforce strict equality (===)
+    'semi': ['error', 'never'], // Disallow semicolons at the end of statements
     'no-extra-semi': 'error', // Disallow extra semicolons
-    'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'] // Ensure spaces are used consistently for indentation
+    'indent': ['error', 2], // Enforce 2 spaces for indentation
+    'comma-spacing': ['error', { 'before': false, 'after': true }], // Ensure space after a comma
+    'no-multiple-empty-lines': ['error', { 'max': 1 }], // Enforce a max of one empty line
+    'quotes': ['error', 'single'], // Enforce single quotes for strings
+    'eqeqeq': ['error', 'always'], // Enforce strict equality (`===`)
+    'no-mixed-spaces-and-tabs': ['error'], // Disallow mixing spaces and tabs for indentation
   }
 }
